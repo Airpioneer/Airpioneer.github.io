@@ -782,11 +782,11 @@
   });
   new Valine({
     el: '#comments',
-    verify: true,
-    notify: true,
+    verify: false,
+    notify: false,
     appId: 'G21AFJpPA7W99jI9XI7rREVj-gzGzoHsz# your leancloud application appid',
     appKey: 'tqDmkd6jazXrPx5pl5oCVllb# your leancloud application appkey',
-    placeholder: 'Just go go',
+    placeholder: '欢迎交流评论...',
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
@@ -1169,15 +1169,15 @@
     
 
     $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'G21AFJpPA7W99jI9XI7rREVj-gzGzoHsz#<app_id>')
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'G21AFJpPA7W99jI9XI7rREVj-gzGzoHsz')
         .done(function({ api_server }) {
           var Counter = function(method, url, data) {
             return $.ajax({
               method: method,
               url: 'https://' + api_server + '/1.1' + url,
               headers: {
-                'X-LC-Id': 'G21AFJpPA7W99jI9XI7rREVj-gzGzoHsz#<app_id>',
-                'X-LC-Key': 'tqDmkd6jazXrPx5pl5oCVllb#<app_key>',
+                'X-LC-Id': 'G21AFJpPA7W99jI9XI7rREVj-gzGzoHsz',
+                'X-LC-Key': 'tqDmkd6jazXrPx5pl5oCVllb',
                 'Content-Type': 'application/json',
               },
               data: data
