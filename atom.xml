@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>thqcloud</title>
   
-  
+  <subtitle>thqcloud&#39;blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://thqcloud.com/"/>
   <updated>2019-03-25T05:22:12.754Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://thqcloud.com/</id>
   
   <author>
     <name>thqcloud</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>hexo搭建</title>
-    <link href="http://yoursite.com/hexo%E6%90%AD%E5%BB%BA.html#2019/03/25/hexo%E6%90%AD%E5%BB%BA/"/>
-    <id>http://yoursite.com/hexo搭建.html#2019/03/25/hexo搭建/</id>
+    <link href="http://thqcloud.com/2019/03/25/hexo%E6%90%AD%E5%BB%BA/"/>
+    <id>http://thqcloud.com/2019/03/25/hexo搭建/</id>
     <published>2019-03-25T00:44:34.000Z</published>
     <updated>2019-03-25T05:22:12.754Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/hello-world.html#2019/03/23/hello-world/"/>
-    <id>http://yoursite.com/hello-world.html#2019/03/23/hello-world/</id>
+    <link href="http://thqcloud.com/2019/03/23/hello-world/"/>
+    <id>http://thqcloud.com/2019/03/23/hello-world/</id>
     <published>2019-03-23T04:23:00.000Z</published>
     <updated>2019-03-23T04:43:16.172Z</updated>
     
@@ -55,10 +55,10 @@
     
     </summary>
     
-      <category term="1" scheme="http://yoursite.com/categories/1/"/>
+      <category term="1" scheme="http://thqcloud.com/categories/1/"/>
     
     
-      <category term="linu" scheme="http://yoursite.com/tags/linu/"/>
+      <category term="linu" scheme="http://thqcloud.com/tags/linu/"/>
     
   </entry>
   
