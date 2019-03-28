@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[centos的基础]]></title>
     <url>%2F2019%2F03%2F26%2Flinux%2F</url>
-    <content type="text"><![CDATA[vi的基本用法 12345Shift+: 模式+i 进入编辑模式+：输入/搜索内容：q!强制退出：x保存退出]]></content>
+    <content type="text"><![CDATA[centos版本查詢12345cat/etc/redhat-release查看版本信息2.6.32-504.12.2.el6.x86_64其中第一组数字2表示发行的内核版本第二组数字6表示稳定版本，如为奇数则表示开发版本第三组数字32表示修改了32次 版本查询参考查看CentOS版本信息centos静态分区1234简单的分区/boot 300MB-500MB主要用于引导程序/swap 这个分区没有挂载点，大小通常为内存的2倍，系统中不常用的数据会放到这个分区/ 根目录文件，根目录的挂载点是“/&quot;。 vi的基本用法 12345678Shift+: 模式+i 进入编辑模式+：输入/搜索内容：q!强制退出：x保存退出/搜索内容 查询3，4d删除行数：%d删除全部数据]]></content>
       <categories>
         <category>linux</category>
       </categories>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://thqcloud.com/"/>
-  <updated>2019-03-26T05:24:58.264Z</updated>
+  <updated>2019-03-28T07:56:58.830Z</updated>
   <id>http://thqcloud.com/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://thqcloud.com/2019/03/26/linux/"/>
     <id>http://thqcloud.com/2019/03/26/linux/</id>
     <published>2019-03-26T03:06:00.000Z</published>
-    <updated>2019-03-26T05:24:58.264Z</updated>
+    <updated>2019-03-28T07:56:58.830Z</updated>
     
-    <content type="html"><![CDATA[<p><strong> vi的基本用法 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Shift+: 模式</span><br><span class="line">+i 进入编辑模式</span><br><span class="line">+：输入/搜索内容</span><br><span class="line">：q!强制退出</span><br><span class="line">：x保存退出</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><strong>centos版本查詢</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cat/etc/redhat-release查看版本信息</span><br><span class="line">2.6.32-504.12.2.el6.x86_64</span><br><span class="line">其中第一组数字2表示发行的内核版本</span><br><span class="line">第二组数字6表示稳定版本，如为奇数则表示开发版本</span><br><span class="line">第三组数字32表示修改了32次</span><br></pre></td></tr></table></figure></p><p>版本查询参考<br><a href="https://blog.csdn.net/shuaigexiaobo/article/details/78030008" rel="external nofollow noopener noreferrer" target="_blank">查看CentOS版本信息</a><br><strong><em>centos静态分区</em></strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">简单的分区</span><br><span class="line">/boot 300MB-500MB主要用于引导程序</span><br><span class="line">/swap 这个分区没有挂载点，大小通常为内存的2倍，系统中不常用的数据会放到这个分区</span><br><span class="line">/ 根目录文件，根目录的挂载点是“/&quot;。</span><br></pre></td></tr></table></figure></p><p><strong> vi的基本用法 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Shift+: 模式</span><br><span class="line">+i 进入编辑模式</span><br><span class="line">+：输入/搜索内容</span><br><span class="line">：q!强制退出</span><br><span class="line">：x保存退出</span><br><span class="line">/搜索内容 查询</span><br><span class="line">3，4d删除行数</span><br><span class="line">：%d删除全部数据</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;strong&gt; vi的基本用法 &lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span cla
+        &lt;p&gt;&lt;strong&gt;centos版本查詢&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span cl
       
     
     </summary>
