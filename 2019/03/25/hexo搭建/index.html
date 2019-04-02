@@ -52,10 +52,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-enxt.ico?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-enxt.ico?v=7.0.1">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
@@ -510,7 +510,7 @@
     
       <div>
         <div id="reward-container">
-  <div>测试没有别的意思</div>
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
   <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
     打赏
   </button>
@@ -836,6 +836,8 @@
 	siteTime();
 </script>
 
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="external nofollow noopener noreferrer" target="_blank">NexT.Mist</a> v7.0.1</div>
+
 
 
 
@@ -908,10 +910,13 @@
 
 
 
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
-  
-  
 
 
 
@@ -931,12 +936,6 @@
 
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/three/three.min.js"></script>
-
-  
-  <script src="/lib/three/three-waves.min.js"></script>
 
 
   
@@ -994,19 +993,48 @@
     el: '#comments',
     verify: false,
     notify: false,
-    appId: 'HANwiFOXvPi45m4xCTmbri74-gzGzoHsz# your leancloud application appid',
-    appKey: 'SImiMTEmbQdEYeoxaPlh6xWz# your leancloud application appkey',
+    appId: 'HANwiFOXvPi45m4xCTmbri74-gzGzoHsz',
+    appKey: 'SImiMTEmbQdEYeoxaPlh6xWz',
     placeholder: '欢迎交流评论...',
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
     visitor: false,
-    lang: '' || 'zh-cn'
+    lang: 'zh-cn' || 'zh-cn'
   });
 </script>
 
 
 
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: md5(location.pathname),
+    
+      language: 'zh-cn',
+    
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
 
   
 
@@ -1375,15 +1403,15 @@
     
 
     $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'HANwiFOXvPi45m4xCTmbri74-gzGzoHsz#<app_id>')
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'HANwiFOXvPi45m4xCTmbri74-gzGzoHsz')
         .done(function({ api_server }) {
           var Counter = function(method, url, data) {
             return $.ajax({
               method: method,
               url: 'https://' + api_server + '/1.1' + url,
               headers: {
-                'X-LC-Id': 'HANwiFOXvPi45m4xCTmbri74-gzGzoHsz#<app_id>',
-                'X-LC-Key': 'SImiMTEmbQdEYeoxaPlh6xWz#<app_key>',
+                'X-LC-Id': 'HANwiFOXvPi45m4xCTmbri74-gzGzoHsz',
+                'X-LC-Key': 'SImiMTEmbQdEYeoxaPlh6xWz',
                 'Content-Type': 'application/json',
               },
               data: data

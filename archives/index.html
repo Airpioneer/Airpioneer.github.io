@@ -52,10 +52,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-enxt.ico?v=7.0.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-enxt.ico?v=7.0.1">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
@@ -107,8 +107,6 @@
 <meta name="twitter:title" content="thqcloud">
 <meta name="twitter:description" content="学习，积累，技术，分享，百度，谷歌，360，ie.">
 
-
-  
 
 
   <link rel="alternate" href="/atom.xml" title="thqcloud" type="application/atom+xml">
@@ -726,6 +724,8 @@
 	siteTime();
 </script>
 
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="external nofollow noopener noreferrer" target="_blank">NexT.Mist</a> v7.0.1</div>
+
 
 
 
@@ -798,10 +798,13 @@
 
 
 
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
-  
-  
 
 
 
@@ -821,12 +824,6 @@
 
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/three/three.min.js"></script>
-
-  
-  <script src="/lib/three/three-waves.min.js"></script>
 
 
   
@@ -880,14 +877,14 @@
     el: '#comments',
     verify: false,
     notify: false,
-    appId: 'HANwiFOXvPi45m4xCTmbri74-gzGzoHsz# your leancloud application appid',
-    appKey: 'SImiMTEmbQdEYeoxaPlh6xWz# your leancloud application appkey',
+    appId: 'HANwiFOXvPi45m4xCTmbri74-gzGzoHsz',
+    appKey: 'SImiMTEmbQdEYeoxaPlh6xWz',
     placeholder: '欢迎交流评论...',
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
     visitor: false,
-    lang: '' || 'zh-cn'
+    lang: 'zh-cn' || 'zh-cn'
   });
 </script>
 
@@ -1265,15 +1262,15 @@
     
 
     $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'HANwiFOXvPi45m4xCTmbri74-gzGzoHsz#<app_id>')
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'HANwiFOXvPi45m4xCTmbri74-gzGzoHsz')
         .done(function({ api_server }) {
           var Counter = function(method, url, data) {
             return $.ajax({
               method: method,
               url: 'https://' + api_server + '/1.1' + url,
               headers: {
-                'X-LC-Id': 'HANwiFOXvPi45m4xCTmbri74-gzGzoHsz#<app_id>',
-                'X-LC-Key': 'SImiMTEmbQdEYeoxaPlh6xWz#<app_key>',
+                'X-LC-Id': 'HANwiFOXvPi45m4xCTmbri74-gzGzoHsz',
+                'X-LC-Key': 'SImiMTEmbQdEYeoxaPlh6xWz',
                 'Content-Type': 'application/json',
               },
               data: data
