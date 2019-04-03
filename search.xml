@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[路由器]]></title>
+    <url>%2F2019%2F04%2F03%2Fcisco%2F</url>
+    <content type="text"><![CDATA[几种模式 模式 标识 命令或说明 用户模式 Router&gt; 开机进入即是；无命令即默认状态 特权模式 Router# enable 全局模式 (config)# congfigure te 接口模式 (config-if)# interface s0/0 路由模式 (config-router)# router rip 访问控制列表模式 (config-std-nacl）# ip access-list standard test 退出命令 退出模式 说明 exit 退到上级命令模式 end 退到特权命令模式 从用户模式到特权模式设置密码的两种方式 方式 命令 文明 enable password cisco 加密 enable secret 1234 备注：show r查看，当同时设置时，加密方式生效，明文方式失效。]]></content>
+      <categories>
+        <category>路由器基础设置</category>
+      </categories>
+      <tags>
+        <tag>思科</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[centos的基础]]></title>
     <url>%2F2019%2F03%2F26%2Flinux%2F</url>
     <content type="text"><![CDATA[centos版本查詢12345cat/etc/redhat-release查看版本信息2.6.32-504.12.2.el6.x86_64其中第一组数字2表示发行的内核版本第二组数字6表示稳定版本，如为奇数则表示开发版本第三组数字32表示修改了32次 版本查询参考查看CentOS版本信息centos静态分区1234简单的分区/boot 300MB-500MB主要用于引导程序/swap 这个分区没有挂载点，大小通常为内存的2倍，系统中不常用的数据会放到这个分区/ 根目录文件，根目录的挂载点是“/&quot;。 cento LVM分区便于系统的后期扩展cnetos运行级别1234567init0 停机init1单用户模式init2多用户模式init3完全多用户模式，服务器一般运行此模式init4一般不用，在一些特殊情况下使用init5X11模式，一般发行版默认的运行级别，可以启动图形桌面init6重新启动 centos目录12345678910111213/ 根目录/bin 系统所需的重要的命令，ls、cp、mkdir/boot linux启动时内核及引导程序的核心文件/dev 设备文件，光驱/etc 系统配置文件，作为一些软件启动时默认配置文件读取的目录/lib 存放动态链接库 /usr/lib、/usr/local/lib/lost+found 系统意外崩溃产生的文件碎片/mnt 存放挂载存储设备的挂载目录/tmp 临时文件/usr 应用程式存放目录/var 内容经常变动，/var/log存放日志/var/Lib存放系统库文件等/sys 虚拟的文件系统。主要记录与系统核心相关的信息，如当前已经载入的模块信息。这个目录实际不站硬盘容量/proc存放操作系统运行时的运行信息，进程信息、内存信息、网络信息等。此目录的内容存放于内存中，实际不占用磁盘空间。/etc/cupinfo存放CPU相关信息 centos系统命令12scp可以将本地文件发送到远程主机或从远程主机拉取文件rsync是Linux系统下常用的数据镜像备份工具，用于在不同的主机之间同步文件。rsync数据传输过程中是加密的，保证数据的安全性 centos网络相关配置12345678/etc/hostname修改主机名称/etc/sysconfig/network-scripts/ifcfg-enoN修改网卡信息IPADDR0 IP地址GATEWAY0网关DNS1DNS2 DNS服务器ONBOOT/etc/host域名对应的IP地址 centos文件服务器配置NFS服务器123安装NFS需要两个软件包：nfs-utils包涵一些基本的NFS命令与控制脚本；rpcbind管理RPC连接的程序 确认系统中是否已经安装了对应的软件rpm -qa|grep -i nfs在有网络的情况下安装nfs、rpcbind软件包yum install -y nfs-utils rpcbindNFS主要的文件和进程 12345nfs有的发行版名字叫做nfsserver,主要控制NFS服务的启动和停止，安装完毕位于/etc/init.d目录下rpc.nfsd是基本的NFS守护进程，主要功能是控制客户端是否可以登录服务器，另外可以结合/etc/hosts.allow和/etc/hosts.deny做更精细的权限控制rpc.mountd是RPC安装守护进程，主要功能是管理NFS的文件系统。通过配置文件共享指定的目录，同时根据配置文件做一些权限验证。rpcbind是管理RPC连接的程序，rpcbind服务对NFS是必须的， 因为是NFS的动态端口分配守护进程，如果rpcbind不启动，NFS服务则无法启动，类似的管理工具portmap。export如果修改了/etc/export文件后不需要重新激活NFS，只要重新扫描一次/etc/export文件，并且重新将设定加载即可。 exportf命令常用参数 参数 说明 -a 全部挂载/etc/exports文件内的设置 -r 重新挂载/etc/exports中的设置 -u 卸载某一个目录 -v 在export时将共享的目录显示在屏幕上 showmount常用命令 参数 说明 -a 列出NFS服务共享的完整目录信息 -d 仅列出客户机远程安装的目录 -e 显示导出目录的列表 配置NFS服务器 要配置NFS，首先就是编辑/etc/export文件。在该文件中，每一行代表一个共享目录，并且描述了该目录如何被共享。 参考：（NFS共享服务主要用于linux系统下文件的共享）inux环境下NFS服务的安装与配置Samba文件共享服务 端常用的指定方式： vi的基本用法 12345678Shift+: 模式+i 进入编辑模式+：输入/搜索内容：q!强制退出：x保存退出/搜索内容 查询3，4d删除行数：%d删除全部数据]]></content>
