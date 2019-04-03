@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="thqcloud">
 <meta property="og:description" content="centos版本查詢12345cat/etc/redhat-release查看版本信息2.6.32-504.12.2.el6.x86_64其中第一组数字2表示发行的内核版本第二组数字6表示稳定版本，如为奇数则表示开发版本第三组数字32表示修改了32次 版本查询参考查看CentOS版本信息centos静态分区1234简单的分区/boot 300MB-500MB主要用于引导程序/swap 这个分区没有">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-29T02:31:29.246Z">
+<meta property="og:updated_time" content="2019-04-03T05:21:36.079Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos的基础">
 <meta name="twitter:description" content="centos版本查詢12345cat/etc/redhat-release查看版本信息2.6.32-504.12.2.el6.x86_64其中第一组数字2表示发行的内核版本第二组数字6表示稳定版本，如为奇数则表示开发版本第三组数字32表示修改了32次 版本查询参考查看CentOS版本信息centos静态分区1234简单的分区/boot 300MB-500MB主要用于引导程序/swap 这个分区没有">
@@ -427,7 +427,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-29 10:31:29" itemprop="dateModified" datetime="2019-03-29T10:31:29+08:00">2019-03-29</time>
+                <time title="修改时间：2019-04-03 13:21:36" itemprop="dateModified" datetime="2019-04-03T13:21:36+08:00">2019-04-03</time>
               
             
           </span>
@@ -506,7 +506,58 @@
 <p><strong>centos系统命令</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp可以将本地文件发送到远程主机或从远程主机拉取文件</span><br><span class="line">rsync是Linux系统下常用的数据镜像备份工具，用于在不同的主机之间同步文件。rsync数据传输过程中是加密的，保证数据的安全性</span><br></pre></td></tr></table></figure></p>
 <p><strong>centos网络相关配置</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/etc/hostname修改主机名称</span><br><span class="line">/etc/sysconfig/network-scripts/ifcfg-enoN修改网卡信息</span><br><span class="line">IPADDR0 IP地址</span><br><span class="line">GATEWAY0网关</span><br><span class="line">DNS1</span><br><span class="line">DNS2 DNS服务器</span><br><span class="line">ONBOOT</span><br><span class="line">/etc/host域名对应的IP地址</span><br></pre></td></tr></table></figure></p>
 <p><strong>centos文件服务器</strong><br>配置NFS服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">安装NFS需要两个软件包：</span><br><span class="line">nfs-utils包涵一些基本的NFS命令与控制脚本；</span><br><span class="line">rpcbind管理RPC连接的程序</span><br></pre></td></tr></table></figure></p>
-<p>确认系统中是否已经安装了对应的软件<br>rpm -qa|grep -i nfs<br>在有网络的情况下安装nfs、rpcbind软件包<br><code>yum install -y nfs-utils rpcbind</code></p>
+<p>确认系统中是否已经安装了对应的软件<br>rpm -qa|grep -i nfs<br>在有网络的情况下安装nfs、rpcbind软件包<br><code>yum install -y nfs-utils rpcbind</code><br><strong>NFS主要的文件和进程</strong><br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nfs有的发行版名字叫做nfsserver,主要控制NFS服务的启动和停止，安装完毕位于/etc/init.d目录下</span><br><span class="line">rpc.nfsd是基本的NFS守护进程，主要功能是控制客户端是否可以登录服务器，另外可以结合/etc/hosts.allow和/etc/hosts.deny做更精细的权限控制</span><br><span class="line">rpc.mountd是RPC安装守护进程，主要功能是管理NFS的文件系统。通过配置文件共享指定的目录，同时根据配置文件做一些权限验证。</span><br><span class="line">rpcbind是管理RPC连接的程序，rpcbind服务对NFS是必须的， 因为是NFS的动态端口分配守护进程，如果rpcbind不启动，NFS服务则无法启动，类似的管理工具portmap。</span><br><span class="line">export如果修改了/etc/export文件后不需要重新激活NFS，只要重新扫描一次/etc/export文件，并且重新将设定加载即可。</span><br></pre></td></tr></table></figure></p>
+<p><strong>exportf命令常用参数</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>全部挂载/etc/exports文件内的设置</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>重新挂载/etc/exports中的设置</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>卸载某一个目录</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>在export时将共享的目录显示在屏幕上</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>showmount常用命令</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>列出NFS服务共享的完整目录信息</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>仅列出客户机远程安装的目录</td>
+</tr>
+<tr>
+<td>-e</td>
+<td>显示导出目录的列表</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>配置NFS服务器</strong><br> 要配置NFS，首先就是编辑/etc/export文件。在该文件中，每一行代表一个共享目录，并且描述了该目录如何被共享。<br> 参考：<br><a href="https://blog.csdn.net/solaraceboy/article/details/78743563" rel="external nofollow noopener noreferrer" target="_blank">inux环境下NFS服务的安装与配置</a><br> <strong>端常用的指定方式：</strong></p>
 <p><strong> vi的基本用法 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Shift+: 模式</span><br><span class="line">+i 进入编辑模式</span><br><span class="line">+：输入/搜索内容</span><br><span class="line">：q!强制退出</span><br><span class="line">：x保存退出</span><br><span class="line">/搜索内容 查询</span><br><span class="line">3，4d删除行数</span><br><span class="line">：%d删除全部数据</span><br></pre></td></tr></table></figure></p>
 
       
