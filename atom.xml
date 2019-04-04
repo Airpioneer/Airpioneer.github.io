@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://thqcloud.com/"/>
-  <updated>2019-04-03T09:57:39.604Z</updated>
+  <updated>2019-04-04T01:36:12.799Z</updated>
   <id>http://thqcloud.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>win10</title>
+    <link href="http://thqcloud.com/2019/04/04/windows/"/>
+    <id>http://thqcloud.com/2019/04/04/windows/</id>
+    <published>2019-04-04T01:16:00.000Z</published>
+    <updated>2019-04-04T01:36:12.799Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>系统管理员设置了系统策略,禁止运行此安装</strong><br>以下图片来自<a href="https://jingyan.baidu.com/article/454316ab14d13ff7a7c03a00.html" rel="external nofollow noopener noreferrer" target="_blank">度娘</a>，如需查看详细信息请点击。<br><img src="https://imgsa.baidu.com/exp/w=500/sign=220c3dff53afa40f3cc6cedd9b66038c/267f9e2f070828384ecc56d9b199a9014d08f13e.jpg" alt="avatar"><br><img src="https://imgsa.baidu.com/exp/w=500/sign=47619d9d3da85edffa8cfe23795509d8/f9dcd100baa1cd1189db86edb012c8fcc2ce2d8a.jpg" alt="avatar"><br><img src="https://imgsa.baidu.com/exp/w=500/sign=74240e7d6c380cd7e61ea2ed9145ad14/9c16fdfaaf51f3de70d548a99deef01f3b29799c.jpg" alt="avatar"><br><img src="https://imgsa.baidu.com/exp/w=500/sign=59da5ead46c2d562f208d0edd71390f3/810a19d8bc3eb135d3184776af1ea8d3fc1f4424.jpg" alt="avatar"><br><img src="https://imgsa.baidu.com/exp/w=500/sign=87aff2660a3b5bb5bed720fe06d1d523/00e93901213fb80ed477921a3fd12f2eb838945d.jpg" alt="avatar"><br><img src="https://imgsa.baidu.com/exp/w=500/sign=741f3a07a651f3dec3b2b964a4eff0ec/314e251f95cad1c84e8f0eea763e6709c83d51c3.jpg" alt="avatar"><br><img src="https://imgsa.baidu.com/exp/w=500/sign=c360992284b1cb133e693c13ed5656da/bba1cd11728b47104eda0f01cacec3fdfd032302.jpg" alt="avatar"><br><img src="https://imgsa.baidu.com/exp/w=500/sign=8c8d19bea44bd11304cdb7326aaea488/b21c8701a18b87d6636756d20e0828381e30fdd2.jpg" alt="avatar"><br><img src="https://imgsa.baidu.com/exp/w=500/sign=9849f8b32c1f95caa6f592b6f9167fc5/d1160924ab18972bdb44fd07efcd7b899f510a84.jpg" alt="avatar"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;系统管理员设置了系统策略,禁止运行此安装&lt;/strong&gt;&lt;br&gt;以下图片来自&lt;a href=&quot;https://jingyan.baidu.com/article/454316ab14d13ff7a7c03a00.html&quot; rel=&quot;external no
+      
+    
+    </summary>
+    
+      <category term="软件安装权限设置" scheme="http://thqcloud.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%9D%83%E9%99%90%E8%AE%BE%E7%BD%AE/"/>
+    
+    
+      <category term="windows" scheme="http://thqcloud.com/tags/windows/"/>
+    
+  </entry>
   
   <entry>
     <title>路由器</title>

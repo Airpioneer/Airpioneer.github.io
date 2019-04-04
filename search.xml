@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[win10]]></title>
+    <url>%2F2019%2F04%2F04%2Fwindows%2F</url>
+    <content type="text"><![CDATA[系统管理员设置了系统策略,禁止运行此安装以下图片来自度娘，如需查看详细信息请点击。]]></content>
+      <categories>
+        <category>软件安装权限设置</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[路由器]]></title>
     <url>%2F2019%2F04%2F03%2Fcisco%2F</url>
     <content type="text"><![CDATA[几种模式 模式 标识 命令或说明 用户模式 Router&gt; 开机进入即是；无命令即默认状态 特权模式 Router# enable 全局模式 (config)# congfigure te 接口模式 (config-if)# interface s0/0 路由模式 (config-router)# router rip 访问控制列表模式 (config-std-nacl）# ip access-list standard test 退出命令 退出模式 说明 exit 退到上级命令模式 end 退到特权命令模式 从用户模式到特权模式设置密码的两种方式 方式 命令 文明 enable password cisco 加密 enable secret 1234 备注：show r查看，当同时设置时，加密方式生效，明文方式失效。]]></content>
