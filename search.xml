@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[云盘]]></title>
+    <url>%2F2019%2F04%2F12%2Fnextcloud%2F</url>
+    <content type="text"><![CDATA[查看系统版本 查看是否已安装相关软件 添加数据源 sudo yum install -y epel-release yum-utils unzip curl wget bash-completion 更新数据 安装nginx 安装php12341.添加php软件源sudo rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm2.安装php 相关软件 sudo yum install -y php72w php72w-fpm php72w-cli php72w-common php72w-curl php72w-gd php72w-mbstring php72w-mysqlnd php72w-process php72w-xml php72w-zip php72w-opcache php72w-pecl-apcu php72w-intl php72w-pecl-redis php72w-pecl-zip 安装成功显示 配置php 12vi /etc/php-fpm.d/www.conf 修改以下不连续的记录点，修改用户，指定端口，启用环境变量 保存文件并退出 vim 编辑器. 12345php相关会话设置 需要在 /var/lib/ 目录下创建一个新的文件夹 session并将其拥有者变更为 nginx 用户最后启动 php-fpm 和 Nginx并且将它们设置为随开机启动的服务。 命令如下12345mkdir -p /var/lib/php/session chown nginx:nginx -R /var/lib/php/session/ sudo systemctl start php-fpm sudo systemctl start nginx sudo systemctl enable php-fpmsudo systemctl enable nginx 安装mariadb10.4 插入数据源 cat &gt;/etc/yum.repos.d/MariaDB.repo&lt;&lt;EOF[mariadb]name = MariaDBbaseurl = http://yum.mariadb.org/10.4/centos7-amd64gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDBgpgcheck=1EOF 更新索引 安装mariadb10.4 sudo yum -y install MariaDB-server MariaDB-client 初始化设置]]></content>
+      <categories>
+        <category>nextcloud</category>
+      </categories>
+      <tags>
+        <tag>云盘</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[win10]]></title>
     <url>%2F2019%2F04%2F04%2Fwindows%2F</url>
     <content type="text"><![CDATA[系统管理员设置了系统策略,禁止运行此安装度娘，如需查看详细信息请点击。 测试mairkdown存储图片 在线转换工具 id图片测试插入markdown格式即本地文件格式 有道云图片只支持png格式即网络存储方式 转换工具地址：图片压缩工具 图片转换base64编码格式 参考文档： 在markdown中直接插入base64编码的图片]]></content>
@@ -42,17 +53,6 @@
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F03%2F23%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-      <categories>
-        <category>测试</category>
-      </categories>
-      <tags>
-        <tag>linu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F03%2F23%2Fnextcloud%2F</url>
-    <content type="text"><![CDATA[查看系统版本 查看是否已安装相关软件 添加数据源 sudo yum install -y epel-release yum-utils unzip curl wget bash-completion 更新数据 安装nginx 安装php12341.添加php软件源sudo rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm2.安装php 相关软件 sudo yum install -y php72w php72w-fpm php72w-cli php72w-common php72w-curl php72w-gd php72w-mbstring php72w-mysqlnd php72w-process php72w-xml php72w-zip php72w-opcache php72w-pecl-apcu php72w-intl php72w-pecl-redis php72w-pecl-zip 安装成功显示 配置php 12vi /etc/php-fpm.d/www.conf 修改以下不连续的记录点，修改用户，指定端口，启用环境变量 保存文件并退出 vim 编辑器. 12345php相关会话设置 需要在 /var/lib/ 目录下创建一个新的文件夹 session并将其拥有者变更为 nginx 用户最后启动 php-fpm 和 Nginx并且将它们设置为随开机启动的服务。 命令如下12345mkdir -p /var/lib/php/session chown nginx:nginx -R /var/lib/php/session/ sudo systemctl start php-fpm sudo systemctl start nginx sudo systemctl enable php-fpmsudo systemctl enable nginx 安装mariadb10.4 插入数据源 >/etc/yum.repos.d/MariaDB.repo]]></content>
       <categories>
         <category>测试</category>
       </categories>
