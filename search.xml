@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[路由器]]></title>
     <url>%2F2019%2F04%2F03%2Fcisco%2F</url>
-    <content type="text"><![CDATA[几种模式 模式 标识 命令或说明 用户模式 Router&gt; 开机进入即是；无命令即默认状态 特权模式 Router# enable 全局模式 (config)# congfigure te 接口模式 (config-if)# interface s0/0 路由模式 (config-router)# router rip 访问控制列表模式 (config-std-nacl）# ip access-list standard test 退出命令 退出模式 说明 exit 退到上级命令模式 end 退到特权命令模式 从用户模式到特权模式设置密码的两种方式 方式 命令 文明 enable password cisco 加密 enable secret 1234 备注：show r查看，当同时设置时，加密方式生效，明文方式失效。]]></content>
+    <content type="text"><![CDATA[几种模式 模式 标识 命令或说明 用户模式 Router&gt; 开机进入即是；无命令即默认状态 特权模式 Router# enable 全局模式 (config)# congfigure te 接口模式 (config-if)# interface s0/0 路由模式 (config-router)# router rip 访问控制列表模式 (config-std-nacl）# ip access-list standard test 退出命令 退出模式 说明 exit 退到上级命令模式 end 退到特权命令模式 从用户模式到特权模式设置密码的两种方式 方式 命令 文明 enable password cisco 加密 enable secret 1234 备注：show r查看，当同时设置时，加密方式生效，明文方式失效。 远程vty密码设置 特权模式 line vty 0 181 一共182个用户 password 密码 running-config显示配置文件 提示信息banner motd #提示信息填写 show flash ios信息查看 show ver版本信息 running-config startup-config write保持命令]]></content>
       <categories>
         <category>路由器基础设置</category>
       </categories>
@@ -42,6 +42,17 @@
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F03%2F23%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>linu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F03%2F23%2Fnextcloud%2F</url>
+    <content type="text"><![CDATA[查看系统版本 查看是否已安装相关软件 添加数据源 sudo yum install -y epel-release yum-utils unzip curl wget bash-completion 更新数据 安装nginx 安装php12341.添加php软件源sudo rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm2.安装php 相关软件 sudo yum install -y php72w php72w-fpm php72w-cli php72w-common php72w-curl php72w-gd php72w-mbstring php72w-mysqlnd php72w-process php72w-xml php72w-zip php72w-opcache php72w-pecl-apcu php72w-intl php72w-pecl-redis php72w-pecl-zip 安装成功显示 配置php 12vi /etc/php-fpm.d/www.conf 修改以下不连续的记录点，修改用户，指定端口，启用环境变量 保存文件并退出 vim 编辑器. 12345php相关会话设置 需要在 /var/lib/ 目录下创建一个新的文件夹 session并将其拥有者变更为 nginx 用户最后启动 php-fpm 和 Nginx并且将它们设置为随开机启动的服务。 命令如下12345mkdir -p /var/lib/php/session chown nginx:nginx -R /var/lib/php/session/ sudo systemctl start php-fpm sudo systemctl start nginx sudo systemctl enable php-fpmsudo systemctl enable nginx 安装mariadb10.4 插入数据源 >/etc/yum.repos.d/MariaDB.repo]]></content>
       <categories>
         <category>测试</category>
       </categories>
