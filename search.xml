@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[win10]]></title>
     <url>%2F2019%2F04%2F04%2Fwindows%2F</url>
-    <content type="text"><![CDATA[系统管理员设置了系统策略,禁止运行此安装度娘，如需查看详细信息请点击。 测试mairkdown存储图片 在线转换工具 id图片测试插入markdown格式即本地文件格式 有道云图片只支持png格式即网络存储方式 转换工具地址：图片压缩工具 图片转换base64编码格式 参考文档： 在markdown中直接插入base64编码的图片]]></content>
+    <content type="text"><![CDATA[系统管理员设置了系统策略,禁止运行此安装度娘，如需查看详细信息请点击。 测试mairkdown存储图片 在线转换工具 id图片测试插入markdown格式即本地文件格式 有道云图片只支持png格式即网络存储方式 转换工具地址：图片压缩工具 图片转换base64编码格式 参考文档： 在markdown中直接插入base64编码的图片 1.windows10重新安装自带照片 1.1首先卸载已经损坏的软件 2.1利用windowsPowerShell（管理员）输入： Get-AppxPackage *Microsoft.Windows.Photos* | Remove-AppxPackage 回车卸载 3.1创建一个reg文件，内容如下 Windows Registry Editor Version 5.00 ; Change Extension&apos;s File Type [HKEY_CURRENT_USER\Software\Classes\.jpg] @=&quot;PhotoViewer.FileAssoc.Tiff&quot; ; Change Extension&apos;s File Type [HKEY_CURRENT_USER\Software\Classes\.jpeg] @=&quot;PhotoViewer.FileAssoc.Tiff&quot; ; Change Extension&apos;s File Type [HKEY_CURRENT_USER\Software\Classes\.gif] @=&quot;PhotoViewer.FileAssoc.Tiff&quot; ; Change Extension&apos;s File Type [HKEY_CURRENT_USER\Software\Classes\.png] @=&quot;PhotoViewer.FileAssoc.Tiff&quot; ; Change Extension&apos;s File Type [HKEY_CURRENT_USER\Software\Classes\.bmp] @=&quot;PhotoViewer.FileAssoc.Tiff&quot; ; Change Extension&apos;s File Type [HKEY_CURRENT_USER\Software\Classes\.tiff] @=&quot;PhotoViewer.FileAssoc.Tiff&quot; ; Change Extension&apos;s File Type [HKEY_CURRENT_USER\Software\Classes\.ico] @=&quot;PhotoViewer.FileAssoc.Tiff&quot; 4.1管理员运行reg文件击即可恢复照片工具]]></content>
       <categories>
         <category>软件安装权限设置</category>
       </categories>
